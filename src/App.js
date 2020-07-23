@@ -2,8 +2,8 @@ import React from "react";
 import data from "./data.js";
 
 import "./App.css";
-import ProductScreen from "./Screens/ProductScreen.js";
-import HomeScreen from "./Screens/HomeScreen.js";
+import ProductScreen from "./Screens/ProductScreen";
+import HomeScreen from "./Screens/HomeScreen";
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 function App() {
   const openMenu = () => {
@@ -32,6 +32,7 @@ function App() {
           <button className="sidebar-close-button" onClick={closeMenu}>
             x
         </button>
+
           <ul>
             <li>
               <a href="index.html">Men</a>
@@ -47,7 +48,7 @@ function App() {
         </aside>
         <main className="main">
           <div className="content">
-            <Route path="/products/:id" component={ProductScreen} />
+            <Route path="/product/:id" component={ProductScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
 
           </div>
