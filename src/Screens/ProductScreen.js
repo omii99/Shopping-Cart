@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import data from '../data';
 
 function ProductScreen(props) {
+    const [qty, setQty] = useState(1);
     console.log(props.match.params.id);
 
     const product = data.products.find(x => x._id === props.match.params.id);
+    const handleAddToCart = () => {
+        props.history.push("/cart/" + props.match.params.id + "?qty" + qty)
+    }
     return (<div>
         <div className="back-to-result">
             <Link to="/">Back to result</Link>
@@ -42,7 +46,7 @@ function ProductScreen(props) {
                 </li>
                 <li>
                     Qty :
-                    <select>
+                    <select value={qty} onChange={(e) => { setQty(e.target.value) }}>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -51,7 +55,7 @@ function ProductScreen(props) {
                     </select>
                 </li>
                 <li>
-                    <button className="button">Add to Cart</button>
+                    <button onClick={handleAddToCart} className="button">Add to Cart</button>
                 </li>
             </ul>
 
