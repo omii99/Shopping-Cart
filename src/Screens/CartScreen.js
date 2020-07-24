@@ -17,34 +17,34 @@ function CartScreen(props) {
 
                 </li>
                 {
-                    cartItems.length === 0 ?
-                        <div>Cart is Empty
+                    //   cartItems.length === 0 ?
+                    <div>Cart is Empty
 
                 </div>
-                        :
-                        cartItems.map(item =>
+
+                    /*    cartItems.map(item =>
                             <div>
-                                <img src={item.image} alt="product" />
-                                <div className="cart-name">
-                                    <div>
-                                        {item.name}
-                                    </div>
-                                    <div>
-                                        Qty:
+                    <img src={item.image} alt="product" />
+                    <div className="cart-name">
+                        <div>
+                            {item.name}
+                        </div>
+                        <div>
+                            Qty:
                                 <select>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
 
-                                        </select>
-                                    </div>
+                            </select>
+                        </div>
 
-                                </div>
-                                <div>
-                                    {item.price}
-                                </div>
-                            </div>
-                        )
+                    </div>
+                    <div>
+                        {item.price}
+                    </div>
+                </div>
+                        )*/
 
 
 
